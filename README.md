@@ -20,17 +20,17 @@
 
 1. Склонируйте репозиторий на ваш компьютер:
 
-   git clone https://github.com/LikhachAlexander/novsu-thesis-template.git
+   `git clone https://github.com/LikhachAlexander/novsu-thesis-template.git`
 
 2. Перейдите в папку с проектом:
 
-   cd novsu-thesis-template
+   `cd novsu-thesis-template`
 
 3. Отредактируйте файл main.tex в соответствии с вашей работой.
 
 4. Скомпилируйте LaTeX-файл с помощью следующей команды:
 
-   pdflatex main.tex
+   `pdflatex main.tex`
 
 5. Повторите команду компиляции, чтобы обновить ссылки и содержание.
 
@@ -38,6 +38,7 @@
 
 Структура проекта выглядит следующим образом:
 
+```
 /novsu-thesis-template
  ├── content/
  │   ├── images/             % Папка для изображений
@@ -58,6 +59,7 @@
  ├── main.pdf                 % Выходной файл
  ├── .vscode/                 % Настройки проекта VS Code
  └── README.md                % Этот файл
+```
 
 ## Контрибьюции
 
