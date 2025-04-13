@@ -1,0 +1,80 @@
+% --------------------- Титульник ВКР НовГУ -----------------------------
+% Автор: Лихач Александр, smouzi45@gmail.com
+% ---------------------------------------------------------------------
+
+% Титульный лист диплома НовГУ
+% Временное удаление foot на titlepage
+\newgeometry{left=30mm, top=20mm, right=15mm, bottom=20mm, nohead, nofoot}
+\begin{titlepage}
+\begin{center}
+
+Министерство науки и высшего образования Российской Федерации
+\\
+Федеральное государственное бюджетное образовательное учреждение 
+высшего образования
+\\
+«Новгородский государственный университет имени Ярослава Мудрого» (НовГУ)
+\\
+Институт электронных и информационных систем
+\\
+\tiny\underline{\hspace{16cm}}
+\\
+\normalsize \lsstyle Кафедра прикладной математики и информатики
+\\
+\end{center}
+
+\begin{flushright}
+\begin{minipage}[t]{0.45\textwidth}
+{\hspace*{\fill}УТВЕРЖДАЮ}
+\\
+\hspace*{\fill}Зав. кафедрой ПМИ, профессор
+\\
+\hspace*{\fill}\underline{\hspace{28mm}} А.А. Иванов
+\\
+\hspace*{\fill}"<\underline{\hspace{7mm}}">\underline{\hspace{35mm}}2025 г.
+\\
+\hfill \break
+\\
+\hfill \break
+\end{minipage}
+\end{flushright}
+
+\begin{center}
+    
+\textbf{НАЗВАНИЕ}
+\\
+Выпускная квалификационная работа
+\\
+к государственной аттестации на степень бакалавра 
+\\
+по направлению 01.03.02 «Прикладная математика и информатика»
+\\
+\hfill \break
+\hfill \break
+\end{center}
+
+\begin{flushright}
+\begin{minipage}[t]{0.45\textwidth}
+{\hspace*{\fill}Научный руководитель}
+\\
+\hspace*{\fill}старший преподаватель
+\\
+\hspace*{\fill}\underline{\hspace{32mm}} Б.Б. Иванов 
+\\
+\hspace*{\fill}"<\underline{\hspace{7mm}}">\underline{\hspace{35mm}}2025 г.
+\\
+\hfill \break
+\\
+\hspace*{\fill}Студент группы 9999
+\\
+\hspace*{\fill}\underline{\hspace{34mm}} В.В. Иванов
+\\
+\hspace*{\fill}"<\underline{\hspace{7mm}}">\underline{\hspace{35mm}}2025 г.
+\end{minipage}
+\end{flushright}
+\end{titlepage}
+% Возвращаем настройки geometry обратно (то, что объявлено в преамбуле)
+\restoregeometry
+% Добавляем 1 к счетчику страниц ПОСЛЕ titlepage, чтобы исключить 
+% влияние titlepage environment
+\addtocounter{page}{1}

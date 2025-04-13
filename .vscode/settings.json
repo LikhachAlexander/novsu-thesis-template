@@ -1,0 +1,96 @@
+{
+    "cSpell.language": "ru,ru-RU,en",
+    "cSpell.words": [
+        "Allstot",
+        "Arbula",
+        "biblabel",
+        "Blox",
+        "BSSID",
+        "CMOS",
+        "dlat",
+        "dlon",
+        "Friis",
+        "FSPL",
+        "geopy",
+        "GLONASS",
+        "GNSS",
+        "Haenggi",
+        "Ibwe",
+        "Kalman",
+        "Ljubic",
+        "LNSM",
+        "multipath",
+        "NMEA",
+        "Pande",
+        "Redmi",
+        "RFIC",
+        "RSSI",
+        "scipy",
+        "Segura",
+        "Shekhar",
+        "Shue",
+        "Srinivasa",
+        "SSID",
+        "Storn",
+        "Strycker",
+        "Torre",
+        "Wielandt",
+        "Xiao",
+        "Xiaomi",
+        "Zheng",
+        "Арсенин",
+        "Гаверсина",
+        "Гарбарь",
+        "Едемский",
+        "логнормального",
+        "логнормальное",
+        "логнормальной",
+        "логнормальным",
+        "Пирсона",
+        "пронормируем",
+        "псевдорешение",
+        "псевдорешением",
+        "псевдорешения",
+        "смарт",
+        "сматрфоны",
+        "Титульник",
+        "трилатерации",
+        "Трилатерация",
+        "Фрииса"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "--shell-escape", // added arg to default
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "--shell-escape", // added arg to default
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "cSpell.enableFiletypes": [
+        "!tex"
+    ]
+}

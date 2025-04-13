@@ -1,0 +1,150 @@
+% размеры полей
+\usepackage[a4paper, top=2cm, bottom=2cm, left=3cm, right=1.5cm, bindingoffset=0cm]{geometry}
+
+% Титульник
+\usepackage{pdfpages}
+
+% шрифт Times New Roman
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\renewcommand{\rmdefault}{Tempora-TLF}
+
+% межстрочный интервал "Полуторный"
+\usepackage{setspace}
+\onehalfspacing
+
+% Абзацный отступ = 1.25см
+\usepackage{indentfirst}
+\setlength\parindent{12.5mm}
+
+% запрет висячих строк
+\usepackage[letterspace=160]{microtype}
+
+\usepackage[nottoc]{tocbibind}
+
+% Настройки заголовков
+\usepackage{textcase}
+\usepackage{titlesec}
+\titleformat*{\section}{\center\fontsize{14pt}{16pt}\bfseries\MakeUppercase}
+\titleformat*{\subsection}{\center\fontsize{14pt}{16pt}\bfseries}
+\titleformat*{\subsubsection}{\fontsize{14pt}{16pt}\bfseries}
+\titlelabel{\thetitle\quad}
+
+% Команда для специальных разделов (введение, обзор литературы, etc)
+% Не нумеруются в содержании, по уровню вложенности: 
+\newcommand{\specialsection}[1]{
+    \phantomsection
+    % \bigskip\smallskip
+    % \hspace{-13.8mm}
+    \begin{center}\normalfont\fontsize{14pt}{16pt}\MakeTextUppercase{\textbf{#1}}\end{center}
+    % \par\bigskip
+    \normalfont\normalsize
+    \addcontentsline{toc}{section}{#1}
+}
+
+
+% Настройки оглавления
+\usepackage[titles]{tocloft}
+
+
+% Настройки оглавления
+% Заголовок
+\AtBeginDocument{\renewcommand{\contentsname}{\fontsize{14pt}{16pt}\centering\textbf{СОДЕРЖАНИЕ}}}
+% Шрифты пунктов
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+% След их точек и настройка шага
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand\cftdotsep{1.5}
+% отступы
+\setlength{\cftbeforesecskip}{4pt}
+\setlength{\cftsubsecindent}{2.68em}
+
+
+% Число страниц
+\usepackage{lastpage}
+
+
+% 
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+% Изображения
+% Нумерация в пределах раздела
+\counterwithin{figure}{section}
+% Подпись
+\usepackage[figurename=Рисунок]{caption}
+\usepackage{subcaption}
+% Стиль разделителя
+\DeclareCaptionLabelSeparator{custom}{ -- }
+\captionsetup
+{
+    labelsep=custom
+}
+% Вставка картинки 1 - path, 2 - <label>, 3 - label_text, 4 - scale
+\newcommand{\image}[4]{
+    \begin{figure}[ht]
+    \begin{center}
+    \scalebox{#4}{
+        % draft - пустая картинка. Ускоряет время компиляции
+        % \includegraphics[draft]{#1}
+        \includegraphics{#1}
+    }
+
+    \caption{
+        \label{#2}#3}
+    \end {center}
+    \vspace{-1em}
+    \end {figure}
+}
+
+% Листинги
+\usepackage{minted}
+% Нумерация в пределах раздела
+\counterwithin{listing}{section}
+% тема
+\usemintedstyle{colorful} %{bw}
+% \usemintedstyle{bw} %{bw}
+
+% Название листинга
+\renewcommand\listingscaption{Листинг}
+% Вставка лиситнга 1 - файл, 2 - <label>, 3 - подпись, 4 - тип файла
+\newcommand{\sourcecode}[4]{
+    \begin{listing}[ht]
+        \inputminted{#4}{#1}
+        \vspace{-1em}
+        \caption{#3}
+        \label{#2}
+    \end{listing}
+}
+
+
+% Таблицы
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
+% Центровка по горизонтали
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+% + центровка по вертикали
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\counterwithin{table}{section}
+
+% запятая как десятичный разделитель
+\usepackage{icomma}
+% математические функции
+\usepackage{amsmath}
+% нумерация в пределах раздела
+\numberwithin{equation}{section}
+
+% Отдельные функции
+% Дистанция
+\newcommand{\Dist}{\operatorname{Dist}}
+\newcommand{\FSPL}{\operatorname{FSPL}}
+\newcommand{\NP}{\mathit{NP}}
+\newcommand{\CR}{\mathit{CR}}
+\newcommand{\PL}{\operatorname{PL}}
+\newcommand{\dBm}{\textup{дБм}} % заменить на русский
+\newcommand{\dB}{\textup{дБ}}
+\newcommand{\mW}{\textup{мВт}}

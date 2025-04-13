@@ -1,0 +1,68 @@
+% заголовок 1
+\section{Заголовок 1 уровня}
+
+% заголовок 2
+\subsection{Заголовок 2 уровня}
+
+% заголовок 3
+\subsubsection{Заголовок 3 уровня}
+
+% заголовок 
+\section{Ещё один заголовок 1 уровня}
+
+% основной текст
+Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст. Ссылка на литературу \cite{GN-lse}.
+
+Список:
+
+\begin{enumerate}
+    \item Предмет 1
+    \item Предмет 2
+    \item Предмет 3
+    \item Предмет 4   
+\end{enumerate}
+
+Формула:
+
+\begin{equation} \label{friis-formula}
+    \frac{P_r}{P_t} = D_t D_r \left(\frac{\lambda}{4 \pi d}\right) ^ 2,
+\end{equation}
+
+Ссылка на формулу \ref{friis-formula}.
+
+Таблица:
+
+\begin{center}
+    \vspace{-0.8em}
+    \begin{longtable}{|M{8cm}|M{4cm}|}
+        \caption{Экспонента затухания для различных сред} \label{PLE-table} \\
+        \hline
+        Среда                             & Экспонента затухания $n$ \\ \hline
+        Свободное пространство            & $2$                      \\ \hline
+        Городская местность               & $[2,7; 3,5]$             \\ \hline
+        Городская местность с затенением  & $[3; 5]$                 \\ \hline
+        Внутри здания (прямая видимость) & $[1,6; 1,8]$             \\ \hline
+        Внутри здания с помехами          & $[4; 6]$                 \\ \hline
+        Фабрика                           & $[2; 3]$                 \\ \hline
+    \end{longtable}
+    \vspace{-1.5em}
+\end{center}
+
+А вот тут у нас картинка \ref{graph-fig}!!!
+
+\image{content/images/doggy.jpg}{graph-fig}{Рисунок собаки}{0.25}
+
+Ссылаемся на график ~\ref{graph-fig}.
+
+Ещё график \ref{dog-fig}
+\image{content/images/doggy.jpg}{dog-fig}{Монти Пайтон, но поменьше}{0.1}
+
+
+\begin{listing}[ht]
+    \inputminted{python}{content/source/fib.py}
+    \caption{Fibonacci series}
+    \label{lst1}
+    \end{listing}
+
+
+Ссылка на листинг \ref{lst1}.

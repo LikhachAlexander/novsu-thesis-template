@@ -1,0 +1,33 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+\usepackage{diplom_style}
+
+\begin{document}
+ 
+% Титульный лист +
+\include{content/titlepage.tex}
+
+% Аннотация +
+\include{content/annotation.tex}
+
+% Содержание +
+\tableofcontents
+\clearpage
+
+% Введение +
+\include{content/introduction.tex}
+
+% глава 1 Пример
+\include{content/example.tex}
+
+% Заключение +
+\include{content/conclusion.tex}
+
+% список литературы
+\include{content/bibliography.tex}
+
+\setcounter{secnumdepth}{0}
+
+\include{content/appendix.tex}
+
+\end{document}
